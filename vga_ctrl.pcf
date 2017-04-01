@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Mar 07 15:05:10 2017
+// Written by: Map P.20131013 on Sat Apr 01 15:46:35 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -21,32 +21,30 @@ COMP "VGA_RED_O<1>" LOCATE = SITE "B4" LEVEL 1;
 COMP "VGA_RED_O<2>" LOCATE = SITE "C5" LEVEL 1;
 COMP "VGA_RED_O<0>" LOCATE = SITE "A3" LEVEL 1;
 TIMEGRP clk_wiz_0_inst_U0_clk_out1_clk_wiz_0 = BEL "h_sync_reg" BEL
-        "v_sync_reg" BEL "vga_red_reg_0" BEL "vga_blue_reg_0" BEL
-        "h_cntr_reg_dly_8" BEL "h_cntr_reg_dly_9" BEL "h_cntr_reg_dly_10" BEL
-        "h_cntr_reg_dly_11" BEL "v_cntr_reg_dly_10" BEL "v_cntr_reg_dly_11"
-        BEL "v_sync_reg_dly" BEL "h_sync_reg_dly" BEL "MOUSE_X_POS_REG_0" BEL
-        "MOUSE_X_POS_REG_1" BEL "MOUSE_X_POS_REG_2" BEL "MOUSE_X_POS_REG_3"
-        BEL "MOUSE_X_POS_REG_4" BEL "MOUSE_X_POS_REG_5" BEL
-        "MOUSE_X_POS_REG_6" BEL "MOUSE_X_POS_REG_7" BEL "MOUSE_X_POS_REG_8"
-        BEL "MOUSE_X_POS_REG_9" BEL "MOUSE_X_POS_REG_10" BEL
-        "MOUSE_Y_POS_REG_0" BEL "MOUSE_Y_POS_REG_1" BEL "MOUSE_Y_POS_REG_2"
-        BEL "MOUSE_Y_POS_REG_3" BEL "MOUSE_Y_POS_REG_4" BEL
-        "MOUSE_Y_POS_REG_5" BEL "MOUSE_Y_POS_REG_6" BEL "MOUSE_Y_POS_REG_7"
-        BEL "MOUSE_Y_POS_REG_8" BEL "MOUSE_Y_POS_REG_9" BEL
-        "board_display_red_dly_0" BEL "enable_board_display_dly" BEL
-        "mouse_cursor_green_dly_0" BEL "enable_mouse_display_dly" BEL
-        "h_cntr_reg_0" BEL "h_cntr_reg_1" BEL "h_cntr_reg_2" BEL
-        "h_cntr_reg_3" BEL "h_cntr_reg_4" BEL "h_cntr_reg_5" BEL
-        "h_cntr_reg_6" BEL "h_cntr_reg_7" BEL "h_cntr_reg_8" BEL
-        "h_cntr_reg_9" BEL "h_cntr_reg_10" BEL "h_cntr_reg_11" BEL
-        "v_cntr_reg_0" BEL "v_cntr_reg_1" BEL "v_cntr_reg_2" BEL
-        "v_cntr_reg_3" BEL "v_cntr_reg_4" BEL "v_cntr_reg_5" BEL
-        "v_cntr_reg_6" BEL "v_cntr_reg_7" BEL "v_cntr_reg_8" BEL
-        "v_cntr_reg_9" BEL "v_cntr_reg_10" BEL "v_cntr_reg_11" BEL
-        "clk_wiz_0_inst/U0/clkout1_buf" BEL "Inst_MouseCtl/state_FSM_FFd1" BEL
-        "Inst_MouseCtl/state_FSM_FFd2" BEL "Inst_MouseCtl/state_FSM_FFd3" BEL
-        "Inst_MouseCtl/state_FSM_FFd4" BEL "Inst_MouseCtl/state_FSM_FFd5" BEL
-        "Inst_MouseCtl/state_FSM_FFd6" BEL
+        "v_sync_reg" BEL "vga_red_reg_0" BEL "h_cntr_reg_dly_8" BEL
+        "h_cntr_reg_dly_9" BEL "h_cntr_reg_dly_10" BEL "h_cntr_reg_dly_11" BEL
+        "v_cntr_reg_dly_10" BEL "v_cntr_reg_dly_11" BEL "v_sync_reg_dly" BEL
+        "h_sync_reg_dly" BEL "MOUSE_X_POS_REG_0" BEL "MOUSE_X_POS_REG_1" BEL
+        "MOUSE_X_POS_REG_2" BEL "MOUSE_X_POS_REG_3" BEL "MOUSE_X_POS_REG_4"
+        BEL "MOUSE_X_POS_REG_5" BEL "MOUSE_X_POS_REG_6" BEL
+        "MOUSE_X_POS_REG_7" BEL "MOUSE_X_POS_REG_8" BEL "MOUSE_X_POS_REG_9"
+        BEL "MOUSE_X_POS_REG_10" BEL "MOUSE_Y_POS_REG_0" BEL
+        "MOUSE_Y_POS_REG_1" BEL "MOUSE_Y_POS_REG_2" BEL "MOUSE_Y_POS_REG_3"
+        BEL "MOUSE_Y_POS_REG_4" BEL "MOUSE_Y_POS_REG_5" BEL
+        "MOUSE_Y_POS_REG_6" BEL "MOUSE_Y_POS_REG_7" BEL "MOUSE_Y_POS_REG_8"
+        BEL "MOUSE_Y_POS_REG_9" BEL "mouse_cursor_green_dly_0" BEL
+        "enable_mouse_display_dly" BEL "h_cntr_reg_0" BEL "h_cntr_reg_1" BEL
+        "h_cntr_reg_2" BEL "h_cntr_reg_3" BEL "h_cntr_reg_4" BEL
+        "h_cntr_reg_5" BEL "h_cntr_reg_6" BEL "h_cntr_reg_7" BEL
+        "h_cntr_reg_8" BEL "h_cntr_reg_9" BEL "h_cntr_reg_10" BEL
+        "h_cntr_reg_11" BEL "v_cntr_reg_0" BEL "v_cntr_reg_1" BEL
+        "v_cntr_reg_2" BEL "v_cntr_reg_3" BEL "v_cntr_reg_4" BEL
+        "v_cntr_reg_5" BEL "v_cntr_reg_6" BEL "v_cntr_reg_7" BEL
+        "v_cntr_reg_8" BEL "v_cntr_reg_9" BEL "v_cntr_reg_10" BEL
+        "v_cntr_reg_11" BEL "clk_wiz_0_inst/U0/clkout1_buf" BEL
+        "Inst_MouseCtl/state_FSM_FFd1" BEL "Inst_MouseCtl/state_FSM_FFd2" BEL
+        "Inst_MouseCtl/state_FSM_FFd3" BEL "Inst_MouseCtl/state_FSM_FFd4" BEL
+        "Inst_MouseCtl/state_FSM_FFd5" BEL "Inst_MouseCtl/state_FSM_FFd6" BEL
         "Inst_MouseCtl/periodic_check_cnt_25" BEL
         "Inst_MouseCtl/periodic_check_cnt_24" BEL
         "Inst_MouseCtl/periodic_check_cnt_23" BEL
@@ -210,9 +208,7 @@ TIMEGRP clk_wiz_0_inst_U0_clk_out1_clk_wiz_0 = BEL "h_sync_reg" BEL
         "Inst_MouseCtl/Inst_Ps2Interface/load_tx_data" BEL
         "Inst_MouseDisplay/ydiff[3]_dff_5_1" BEL
         "Inst_MouseDisplay/ydiff[3]_dff_5_0" BEL
-        "Inst_MouseDisplay/enable_mouse_display" BEL
-        "Inst_BoardDisplay/xdiff[5]_dff_53_0" BEL
-        "Inst_BoardDisplay/enable_display" BEL "Inst_MouseCtl/y_new" BEL
+        "Inst_MouseDisplay/enable_mouse_display" BEL "Inst_MouseCtl/y_new" BEL
         "Inst_MouseCtl/x_new" BEL "Inst_MouseCtl/reset_periodic_check_cnt" BEL
         "Inst_MouseCtl/reset_timeout_cnt" BEL "Inst_MouseCtl/haswheel" BEL
         "Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_clean" BEL
@@ -223,7 +219,7 @@ TIMEGRP clk_wiz_0_inst_U0_clk_out1_clk_wiz_0 = BEL "h_sync_reg" BEL
         "Inst_MouseCtl/Inst_Ps2Interface/delay_63clk_done" BEL
         "Inst_MouseCtl/Inst_Ps2Interface/delay_20us_done" BEL
         "Inst_MouseCtl/Inst_Ps2Interface/delay_100us_done" BEL
-        "Inst_MouseDisplay/blue_out_3" BEL "Inst_BoardDisplay/green_out_3";
+        "Inst_MouseDisplay/blue_out_3";
 PIN clk_wiz_0_inst/U0/mmcm_adv_inst_pins<2> = BEL
         "clk_wiz_0_inst/U0/mmcm_adv_inst" PINNAME CLKIN1;
 TIMEGRP sys_clk_pin = PIN "clk_wiz_0_inst/U0/mmcm_adv_inst_pins<2>";

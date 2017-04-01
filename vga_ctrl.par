@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-NAME-PC::  Tue Mar 07 15:05:15 2017
+NAME-PC::  Sat Apr 01 15:46:41 2017
 
 par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd
 vga_ctrl.pcf 
@@ -22,29 +22,29 @@ Device speed data version:  "PRODUCTION 1.10 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   285 out of 126,800    1%
-    Number used as Flip Flops:                 285
+  Number of Slice Registers:                   279 out of 126,800    1%
+    Number used as Flip Flops:                 279
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        438 out of  63,400    1%
-    Number used as logic:                      426 out of  63,400    1%
-      Number using O6 output only:             218
-      Number using O5 output only:             108
-      Number using O5 and O6:                  100
+  Number of Slice LUTs:                        426 out of  63,400    1%
+    Number used as logic:                      412 out of  63,400    1%
+      Number using O6 output only:             209
+      Number using O5 output only:             107
+      Number using O5 and O6:                   96
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  19,000    0%
-    Number used exclusively as route-thrus:     12
-      Number with same-slice register load:      6
+    Number used exclusively as route-thrus:     14
+      Number with same-slice register load:      8
       Number with same-slice carry load:         6
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   161 out of  15,850    1%
-  Number of LUT Flip Flop pairs used:          490
-    Number with an unused Flip Flop:           233 out of     490   47%
-    Number with an unused LUT:                  52 out of     490   10%
-    Number of fully used LUT-FF pairs:         205 out of     490   41%
+  Number of occupied Slices:                   148 out of  15,850    1%
+  Number of LUT Flip Flop pairs used:          458
+    Number with an unused Flip Flop:           208 out of     458   45%
+    Number with an unused LUT:                  32 out of     458    6%
+    Number of fully used LUT-FF pairs:         218 out of     458   47%
     Number of slice register sites lost
       to control set restrictions:               0 out of 126,800    0%
 
@@ -97,33 +97,33 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 23 secs 
-Finished initial Timing Analysis.  REAL time: 23 secs 
+Starting initial Timing Analysis.  REAL time: 52 secs 
+Finished initial Timing Analysis.  REAL time: 52 secs 
 
 Starting Router
 
 
-Phase  1  : 2099 unrouted;      REAL time: 25 secs 
+Phase  1  : 2005 unrouted;      REAL time: 53 secs 
 
-Phase  2  : 1747 unrouted;      REAL time: 26 secs 
+Phase  2  : 1663 unrouted;      REAL time: 54 secs 
 
-Phase  3  : 497 unrouted;      REAL time: 27 secs 
+Phase  3  : 550 unrouted;      REAL time: 55 secs 
 
-Phase  4  : 497 unrouted; (Setup:0, Hold:1238, Component Switching Limit:0)     REAL time: 33 secs 
+Phase  4  : 550 unrouted; (Setup:0, Hold:1661, Component Switching Limit:0)     REAL time: 1 mins 1 secs 
 
 Updating file: vga_ctrl.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:962, Component Switching Limit:0)     REAL time: 33 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:1061, Component Switching Limit:0)     REAL time: 1 mins 3 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:962, Component Switching Limit:0)     REAL time: 33 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:1061, Component Switching Limit:0)     REAL time: 1 mins 3 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:962, Component Switching Limit:0)     REAL time: 33 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:1061, Component Switching Limit:0)     REAL time: 1 mins 3 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:962, Component Switching Limit:0)     REAL time: 33 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:1061, Component Switching Limit:0)     REAL time: 1 mins 3 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 34 secs 
-Total REAL time to Router completion: 34 secs 
-Total CPU time to Router completion: 29 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 3 secs 
+Total REAL time to Router completion: 1 mins 3 secs 
+Total CPU time to Router completion: 33 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -141,7 +141,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|             pxl_clk |BUFGCTRL_X0Y31| No   |  105 |  0.089     |  1.299      |
+|             pxl_clk |BUFGCTRL_X0Y31| No   |   97 |  0.090     |  1.299      |
 +---------------------+--------------+------+------+------------+-------------+
 |clk_wiz_0_inst/U0/cl |              |      |      |            |             |
 |kfbout_buf_clk_wiz_0 |              |      |      |            |             |
@@ -169,8 +169,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clk_wiz_0_inst_U0_clk_out1_clk_wiz_0 = | SETUP       |     5.088ns|     4.171ns|       0|           0
-   PERIOD TIMEGRP         "clk_wiz_0_inst_U | HOLD        |     0.113ns|            |       0|           0
+  TS_clk_wiz_0_inst_U0_clk_out1_clk_wiz_0 = | SETUP       |     5.196ns|     4.063ns|       0|           0
+   PERIOD TIMEGRP         "clk_wiz_0_inst_U | HOLD        |     0.164ns|            |       0|           0
   0_clk_out1_clk_wiz_0" TS_sys_clk_pin * 1. |             |            |            |        |            
   08 HIGH 50%                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
@@ -189,8 +189,8 @@ Derived Constraints for TS_sys_clk_pin
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk_pin                 |     10.000ns|      4.000ns|      4.505ns|            0|            0|            0|         9504|
-| TS_clk_wiz_0_inst_U0_clk_out1_|      9.259ns|      4.171ns|          N/A|            0|            0|         9504|            0|
+|TS_sys_clk_pin                 |     10.000ns|      4.000ns|      4.388ns|            0|            0|            0|         9419|
+| TS_clk_wiz_0_inst_U0_clk_out1_|      9.259ns|      4.063ns|          N/A|            0|            0|         9419|            0|
 | clk_wiz_0                     |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
@@ -201,10 +201,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 34 secs 
-Total CPU time to PAR completion: 30 secs 
+Total REAL time to PAR completion: 1 mins 4 secs 
+Total CPU time to PAR completion: 34 secs 
 
-Peak Memory Usage:  674 MB
+Peak Memory Usage:  694 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

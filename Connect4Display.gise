@@ -191,16 +191,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1490722623" xil_pn:in_ck="193445372825515077" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-7724547156137639582" xil_pn:start_ts="1490722611">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1491075021" xil_pn:in_ck="193445372825515077" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-7724547156137639582" xil_pn:start_ts="1491074985">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="vga_ctrl.lso"/>
       <outfile xil_pn:name="vga_ctrl.ngc"/>
       <outfile xil_pn:name="vga_ctrl.ngr"/>
       <outfile xil_pn:name="vga_ctrl.prj"/>
+      <outfile xil_pn:name="vga_ctrl.stx"/>
       <outfile xil_pn:name="vga_ctrl.syr"/>
       <outfile xil_pn:name="vga_ctrl.xst"/>
       <outfile xil_pn:name="vga_ctrl_xst.xrpt"/>
@@ -211,22 +213,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1488917060" xil_pn:in_ck="2320132040412178452" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2979658573454891990" xil_pn:start_ts="1488917049">
+    <transform xil_pn:end_ts="1491075034" xil_pn:in_ck="2320132040412178452" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2979658573454891990" xil_pn:start_ts="1491075021">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="vga_ctrl.bld"/>
       <outfile xil_pn:name="vga_ctrl.ngd"/>
       <outfile xil_pn:name="vga_ctrl_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1488917113" xil_pn:in_ck="2320132040412178453" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1488917060">
+    <transform xil_pn:end_ts="1491075999" xil_pn:in_ck="2320132040412178453" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1491075034">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="vga_ctrl.pcf"/>
       <outfile xil_pn:name="vga_ctrl_map.map"/>
@@ -237,10 +235,9 @@
       <outfile xil_pn:name="vga_ctrl_summary.xml"/>
       <outfile xil_pn:name="vga_ctrl_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1488917174" xil_pn:in_ck="-4589790705132897874" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1488917113">
+    <transform xil_pn:end_ts="1491076092" xil_pn:in_ck="-4589790705132897874" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1491075999">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="vga_ctrl.ncd"/>
       <outfile xil_pn:name="vga_ctrl.pad"/>
@@ -252,12 +249,9 @@
       <outfile xil_pn:name="vga_ctrl_pad.txt"/>
       <outfile xil_pn:name="vga_ctrl_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1488917231" xil_pn:in_ck="6126361100535154645" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1488917174">
+    <transform xil_pn:end_ts="1491076177" xil_pn:in_ck="6126361100535154645" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1491076092">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="usage_statistics_webtalk.html"/>
       <outfile xil_pn:name="vga_ctrl.bgn"/>
@@ -267,10 +261,9 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1488917174" xil_pn:in_ck="2320132040412178321" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1488917151">
+    <transform xil_pn:end_ts="1491076092" xil_pn:in_ck="2320132040412178321" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1491076068">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="vga_ctrl.twr"/>
       <outfile xil_pn:name="vga_ctrl.twx"/>
@@ -279,7 +272,6 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="netgen"/>
       <outfile xil_pn:name="netgen/synthesis/vga_ctrl_synthesis.nlf"/>

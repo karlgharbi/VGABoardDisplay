@@ -69,19 +69,19 @@ Timing constraint: TS_clk_wiz_0_inst_U0_clk_out1_clk_wiz_0 = PERIOD TIMEGRP
     "clk_wiz_0_inst_U0_clk_out1_clk_wiz_0" TS_sys_clk_pin * 1.08 HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 9504 paths analyzed, 1158 endpoints analyzed, 0 failing endpoints
+ 9419 paths analyzed, 1136 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.171ns.
+ Minimum period is   4.063ns.
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_MouseDisplay/enable_mouse_display (SLICE_X59Y147.B1), 178 paths
+Paths for end point Inst_MouseDisplay/enable_mouse_display (SLICE_X56Y144.B1), 178 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     5.088ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     5.196ns (requirement - (data path - clock path skew + uncertainty))
   Source:               MOUSE_X_POS_REG_0 (FF)
   Destination:          Inst_MouseDisplay/enable_mouse_display (FF)
   Requirement:          9.259ns
-  Data Path Delay:      4.057ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.042ns (0.566 - 0.608)
+  Data Path Delay:      3.953ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.038ns (0.565 - 0.603)
   Source Clock:         pxl_clk rising at 0.000ns
   Destination Clock:    pxl_clk rising at 9.259ns
   Clock Uncertainty:    0.072ns
@@ -95,37 +95,37 @@ Slack (setup path):     5.088ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X56Y143.AQ     Tcko                  0.393   MOUSE_X_POS_REG<3>
+    SLICE_X55Y139.AQ     Tcko                  0.341   MOUSE_X_POS_REG<3>
                                                        MOUSE_X_POS_REG_0
-    SLICE_X55Y146.A1     net (fanout=5)        0.757   MOUSE_X_POS_REG<0>
-    SLICE_X55Y146.COUT   Topcya                0.492   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<3>
-                                                       Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_lut<0>_INV_0
-                                                       Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<3>
-    SLICE_X55Y147.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<3>
-    SLICE_X55Y147.DMUX   Tcind                 0.371   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
-                                                       Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
-    SLICE_X53Y147.D2     net (fanout=1)        0.586   Inst_MouseDisplay/xpos[11]_GND_65_o_add_6_OUT<7>
-    SLICE_X53Y147.COUT   Topcyd                0.396   Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_cy<3>
-                                                       Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_lut<3>
-                                                       Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_cy<3>
-    SLICE_X53Y148.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_cy<3>
-    SLICE_X53Y148.BMUX   Tcinb                 0.272   Inst_MouseDisplay/xpos[11]_hcount[11]_LessThan_8_o
-                                                       Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_cy<5>
-    SLICE_X59Y147.B1     net (fanout=1)        0.725   Inst_MouseDisplay/xpos[11]_hcount[11]_LessThan_8_o
-    SLICE_X59Y147.CLK    Tas                   0.065   Inst_MouseDisplay/enable_mouse_display
+    SLICE_X52Y143.A2     net (fanout=5)        0.822   MOUSE_X_POS_REG<0>
+    SLICE_X52Y143.COUT   Topcya                0.492   Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<3>
+                                                       Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_lut<0>_INV_0
+                                                       Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<3>
+    SLICE_X52Y144.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<3>
+    SLICE_X52Y144.COUT   Tbyp                  0.089   Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<7>
+                                                       Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<7>
+    SLICE_X52Y145.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<7>
+    SLICE_X52Y145.DMUX   Tcind                 0.371   Inst_MouseDisplay/GND_65_o_GND_65_o_sub_10_OUT<11>
+                                                       Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_xor<11>
+    SLICE_X53Y144.B1     net (fanout=1)        0.594   Inst_MouseDisplay/GND_65_o_GND_65_o_sub_10_OUT<11>
+    SLICE_X53Y144.BMUX   Topbb                 0.616   Inst_MouseDisplay/Mcompar_hcount[11]_GND_65_o_LessThan_11_o_cy<5>
+                                                       Inst_MouseDisplay/Mcompar_hcount[11]_GND_65_o_LessThan_11_o_lut<5>
+                                                       Inst_MouseDisplay/Mcompar_hcount[11]_GND_65_o_LessThan_11_o_cy<5>
+    SLICE_X56Y144.B1     net (fanout=1)        0.603   Inst_MouseDisplay/Mcompar_hcount[11]_GND_65_o_LessThan_11_o_cy<5>
+    SLICE_X56Y144.CLK    Tas                   0.025   Inst_MouseDisplay/enable_mouse_display
                                                        Inst_MouseDisplay/xpos[11]_mousepixel[1]_AND_41_o1
                                                        Inst_MouseDisplay/enable_mouse_display
     -------------------------------------------------  ---------------------------
-    Total                                      4.057ns (1.989ns logic, 2.068ns route)
-                                                       (49.0% logic, 51.0% route)
+    Total                                      3.953ns (1.934ns logic, 2.019ns route)
+                                                       (48.9% logic, 51.1% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.089ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     5.237ns (requirement - (data path - clock path skew + uncertainty))
   Source:               MOUSE_X_POS_REG_0 (FF)
   Destination:          Inst_MouseDisplay/enable_mouse_display (FF)
   Requirement:          9.259ns
-  Data Path Delay:      4.056ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.042ns (0.566 - 0.608)
+  Data Path Delay:      3.912ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.038ns (0.565 - 0.603)
   Source Clock:         pxl_clk rising at 0.000ns
   Destination Clock:    pxl_clk rising at 9.259ns
   Clock Uncertainty:    0.072ns
@@ -139,37 +139,125 @@ Slack (setup path):     5.089ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X56Y143.AQ     Tcko                  0.393   MOUSE_X_POS_REG<3>
+    SLICE_X55Y139.AQ     Tcko                  0.341   MOUSE_X_POS_REG<3>
                                                        MOUSE_X_POS_REG_0
-    SLICE_X55Y146.A1     net (fanout=5)        0.757   MOUSE_X_POS_REG<0>
-    SLICE_X55Y146.COUT   Topcya                0.492   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<3>
-                                                       Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_lut<0>_INV_0
-                                                       Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<3>
-    SLICE_X55Y147.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<3>
-    SLICE_X55Y147.COUT   Tbyp                  0.089   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
+    SLICE_X52Y143.A2     net (fanout=5)        0.822   MOUSE_X_POS_REG<0>
+    SLICE_X52Y143.COUT   Topcya                0.492   Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<3>
+                                                       Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_lut<0>_INV_0
+                                                       Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<3>
+    SLICE_X52Y144.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<3>
+    SLICE_X52Y144.COUT   Tbyp                  0.089   Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<7>
+                                                       Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<7>
+    SLICE_X52Y145.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<7>
+    SLICE_X52Y145.BMUX   Tcinb                 0.358   Inst_MouseDisplay/GND_65_o_GND_65_o_sub_10_OUT<11>
+                                                       Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_xor<11>
+    SLICE_X53Y144.A1     net (fanout=1)        0.591   Inst_MouseDisplay/GND_65_o_GND_65_o_sub_10_OUT<9>
+    SLICE_X53Y144.BMUX   Topab                 0.591   Inst_MouseDisplay/Mcompar_hcount[11]_GND_65_o_LessThan_11_o_cy<5>
+                                                       Inst_MouseDisplay/Mcompar_hcount[11]_GND_65_o_LessThan_11_o_lut<4>
+                                                       Inst_MouseDisplay/Mcompar_hcount[11]_GND_65_o_LessThan_11_o_cy<5>
+    SLICE_X56Y144.B1     net (fanout=1)        0.603   Inst_MouseDisplay/Mcompar_hcount[11]_GND_65_o_LessThan_11_o_cy<5>
+    SLICE_X56Y144.CLK    Tas                   0.025   Inst_MouseDisplay/enable_mouse_display
+                                                       Inst_MouseDisplay/xpos[11]_mousepixel[1]_AND_41_o1
+                                                       Inst_MouseDisplay/enable_mouse_display
+    -------------------------------------------------  ---------------------------
+    Total                                      3.912ns (1.896ns logic, 2.016ns route)
+                                                       (48.5% logic, 51.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.260ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               MOUSE_X_POS_REG_0 (FF)
+  Destination:          Inst_MouseDisplay/enable_mouse_display (FF)
+  Requirement:          9.259ns
+  Data Path Delay:      3.889ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.038ns (0.565 - 0.603)
+  Source Clock:         pxl_clk rising at 0.000ns
+  Destination Clock:    pxl_clk rising at 9.259ns
+  Clock Uncertainty:    0.072ns
+
+  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: MOUSE_X_POS_REG_0 to Inst_MouseDisplay/enable_mouse_display
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y139.AQ     Tcko                  0.341   MOUSE_X_POS_REG<3>
+                                                       MOUSE_X_POS_REG_0
+    SLICE_X52Y143.A2     net (fanout=5)        0.822   MOUSE_X_POS_REG<0>
+    SLICE_X52Y143.COUT   Topcya                0.492   Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<3>
+                                                       Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_lut<0>_INV_0
+                                                       Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<3>
+    SLICE_X52Y144.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<3>
+    SLICE_X52Y144.COUT   Tbyp                  0.089   Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<7>
+                                                       Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<7>
+    SLICE_X52Y145.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_cy<7>
+    SLICE_X52Y145.CMUX   Tcinc                 0.314   Inst_MouseDisplay/GND_65_o_GND_65_o_sub_10_OUT<11>
+                                                       Inst_MouseDisplay/Madd_GND_65_o_GND_65_o_sub_10_OUT<11:0>_xor<11>
+    SLICE_X53Y144.B2     net (fanout=1)        0.587   Inst_MouseDisplay/GND_65_o_GND_65_o_sub_10_OUT<10>
+    SLICE_X53Y144.BMUX   Topbb                 0.616   Inst_MouseDisplay/Mcompar_hcount[11]_GND_65_o_LessThan_11_o_cy<5>
+                                                       Inst_MouseDisplay/Mcompar_hcount[11]_GND_65_o_LessThan_11_o_lut<5>
+                                                       Inst_MouseDisplay/Mcompar_hcount[11]_GND_65_o_LessThan_11_o_cy<5>
+    SLICE_X56Y144.B1     net (fanout=1)        0.603   Inst_MouseDisplay/Mcompar_hcount[11]_GND_65_o_LessThan_11_o_cy<5>
+    SLICE_X56Y144.CLK    Tas                   0.025   Inst_MouseDisplay/enable_mouse_display
+                                                       Inst_MouseDisplay/xpos[11]_mousepixel[1]_AND_41_o1
+                                                       Inst_MouseDisplay/enable_mouse_display
+    -------------------------------------------------  ---------------------------
+    Total                                      3.889ns (1.877ns logic, 2.012ns route)
+                                                       (48.3% logic, 51.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_MouseDisplay/enable_mouse_display (SLICE_X56Y144.B2), 178 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     5.454ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               MOUSE_X_POS_REG_6 (FF)
+  Destination:          Inst_MouseDisplay/enable_mouse_display (FF)
+  Requirement:          9.259ns
+  Data Path Delay:      3.694ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.039ns (0.565 - 0.604)
+  Source Clock:         pxl_clk rising at 0.000ns
+  Destination Clock:    pxl_clk rising at 9.259ns
+  Clock Uncertainty:    0.072ns
+
+  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: MOUSE_X_POS_REG_6 to Inst_MouseDisplay/enable_mouse_display
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y141.CQ     Tcko                  0.341   MOUSE_X_POS_REG<7>
+                                                       MOUSE_X_POS_REG_6
+    SLICE_X55Y143.C2     net (fanout=2)        0.749   MOUSE_X_POS_REG<6>
+    SLICE_X55Y143.COUT   Topcyc                0.398   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
+                                                       MOUSE_X_POS_REG<6>_rt.1
                                                        Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
-    SLICE_X55Y148.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
-    SLICE_X55Y148.BMUX   Tcinb                 0.358   Inst_MouseDisplay/xpos[11]_GND_65_o_add_6_OUT<11>
+    SLICE_X55Y144.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
+    SLICE_X55Y144.DMUX   Tcind                 0.371   Inst_MouseDisplay/xpos[11]_GND_65_o_add_6_OUT<11>
                                                        Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_xor<11>
-    SLICE_X53Y148.A1     net (fanout=1)        0.586   Inst_MouseDisplay/xpos[11]_GND_65_o_add_6_OUT<9>
-    SLICE_X53Y148.BMUX   Topab                 0.591   Inst_MouseDisplay/xpos[11]_hcount[11]_LessThan_8_o
-                                                       Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_lut<4>
+    SLICE_X57Y144.B1     net (fanout=1)        0.605   Inst_MouseDisplay/xpos[11]_GND_65_o_add_6_OUT<11>
+    SLICE_X57Y144.BMUX   Topbb                 0.616   Inst_MouseDisplay/xpos[11]_hcount[11]_LessThan_8_o
+                                                       Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_lut<5>
                                                        Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_cy<5>
-    SLICE_X59Y147.B1     net (fanout=1)        0.725   Inst_MouseDisplay/xpos[11]_hcount[11]_LessThan_8_o
-    SLICE_X59Y147.CLK    Tas                   0.065   Inst_MouseDisplay/enable_mouse_display
+    SLICE_X56Y144.B2     net (fanout=1)        0.589   Inst_MouseDisplay/xpos[11]_hcount[11]_LessThan_8_o
+    SLICE_X56Y144.CLK    Tas                   0.025   Inst_MouseDisplay/enable_mouse_display
                                                        Inst_MouseDisplay/xpos[11]_mousepixel[1]_AND_41_o1
                                                        Inst_MouseDisplay/enable_mouse_display
     -------------------------------------------------  ---------------------------
-    Total                                      4.056ns (1.988ns logic, 2.068ns route)
-                                                       (49.0% logic, 51.0% route)
+    Total                                      3.694ns (1.751ns logic, 1.943ns route)
+                                                       (47.4% logic, 52.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.116ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               MOUSE_X_POS_REG_0 (FF)
+Slack (setup path):     5.460ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               MOUSE_X_POS_REG_1 (FF)
   Destination:          Inst_MouseDisplay/enable_mouse_display (FF)
   Requirement:          9.259ns
-  Data Path Delay:      4.029ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.042ns (0.566 - 0.608)
+  Data Path Delay:      3.689ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.038ns (0.565 - 0.603)
   Source Clock:         pxl_clk rising at 0.000ns
   Destination Clock:    pxl_clk rising at 9.259ns
   Clock Uncertainty:    0.072ns
@@ -179,44 +267,127 @@ Slack (setup path):     5.116ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.125ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: MOUSE_X_POS_REG_0 to Inst_MouseDisplay/enable_mouse_display
+  Maximum Data Path at Slow Process Corner: MOUSE_X_POS_REG_1 to Inst_MouseDisplay/enable_mouse_display
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X56Y143.AQ     Tcko                  0.393   MOUSE_X_POS_REG<3>
-                                                       MOUSE_X_POS_REG_0
-    SLICE_X55Y146.A1     net (fanout=5)        0.757   MOUSE_X_POS_REG<0>
-    SLICE_X55Y146.COUT   Topcya                0.492   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<3>
-                                                       Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_lut<0>_INV_0
+    SLICE_X55Y139.BQ     Tcko                  0.341   MOUSE_X_POS_REG<3>
+                                                       MOUSE_X_POS_REG_1
+    SLICE_X55Y142.B4     net (fanout=5)        0.544   MOUSE_X_POS_REG<1>
+    SLICE_X55Y142.COUT   Topcyb                0.509   MOUSE_X_POS_REG<8>
+                                                       MOUSE_X_POS_REG<1>_rt
                                                        Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<3>
-    SLICE_X55Y147.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<3>
-    SLICE_X55Y147.COUT   Tbyp                  0.089   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
+    SLICE_X55Y143.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<3>
+    SLICE_X55Y143.COUT   Tbyp                  0.089   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
                                                        Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
-    SLICE_X55Y148.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
-    SLICE_X55Y148.BMUX   Tcinb                 0.358   Inst_MouseDisplay/xpos[11]_GND_65_o_add_6_OUT<11>
+    SLICE_X55Y144.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
+    SLICE_X55Y144.DMUX   Tcind                 0.371   Inst_MouseDisplay/xpos[11]_GND_65_o_add_6_OUT<11>
                                                        Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_xor<11>
-    SLICE_X53Y148.A1     net (fanout=1)        0.586   Inst_MouseDisplay/xpos[11]_GND_65_o_add_6_OUT<9>
-    SLICE_X53Y148.BMUX   Topab                 0.564   Inst_MouseDisplay/xpos[11]_hcount[11]_LessThan_8_o
-                                                       Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_lutdi4
+    SLICE_X57Y144.B1     net (fanout=1)        0.605   Inst_MouseDisplay/xpos[11]_GND_65_o_add_6_OUT<11>
+    SLICE_X57Y144.BMUX   Topbb                 0.616   Inst_MouseDisplay/xpos[11]_hcount[11]_LessThan_8_o
+                                                       Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_lut<5>
                                                        Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_cy<5>
-    SLICE_X59Y147.B1     net (fanout=1)        0.725   Inst_MouseDisplay/xpos[11]_hcount[11]_LessThan_8_o
-    SLICE_X59Y147.CLK    Tas                   0.065   Inst_MouseDisplay/enable_mouse_display
+    SLICE_X56Y144.B2     net (fanout=1)        0.589   Inst_MouseDisplay/xpos[11]_hcount[11]_LessThan_8_o
+    SLICE_X56Y144.CLK    Tas                   0.025   Inst_MouseDisplay/enable_mouse_display
                                                        Inst_MouseDisplay/xpos[11]_mousepixel[1]_AND_41_o1
                                                        Inst_MouseDisplay/enable_mouse_display
     -------------------------------------------------  ---------------------------
-    Total                                      4.029ns (1.961ns logic, 2.068ns route)
-                                                       (48.7% logic, 51.3% route)
+    Total                                      3.689ns (1.951ns logic, 1.738ns route)
+                                                       (52.9% logic, 47.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.507ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               MOUSE_X_POS_REG_4 (FF)
+  Destination:          Inst_MouseDisplay/enable_mouse_display (FF)
+  Requirement:          9.259ns
+  Data Path Delay:      3.641ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.039ns (0.565 - 0.604)
+  Source Clock:         pxl_clk rising at 0.000ns
+  Destination Clock:    pxl_clk rising at 9.259ns
+  Clock Uncertainty:    0.072ns
+
+  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: MOUSE_X_POS_REG_4 to Inst_MouseDisplay/enable_mouse_display
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y141.AQ     Tcko                  0.341   MOUSE_X_POS_REG<7>
+                                                       MOUSE_X_POS_REG_4
+    SLICE_X55Y143.A3     net (fanout=2)        0.602   MOUSE_X_POS_REG<4>
+    SLICE_X55Y143.COUT   Topcya                0.492   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
+                                                       MOUSE_X_POS_REG<4>_rt.1
+                                                       Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
+    SLICE_X55Y144.CIN    net (fanout=1)        0.000   Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_cy<7>
+    SLICE_X55Y144.DMUX   Tcind                 0.371   Inst_MouseDisplay/xpos[11]_GND_65_o_add_6_OUT<11>
+                                                       Inst_MouseDisplay/Madd_xpos[11]_GND_65_o_add_6_OUT_xor<11>
+    SLICE_X57Y144.B1     net (fanout=1)        0.605   Inst_MouseDisplay/xpos[11]_GND_65_o_add_6_OUT<11>
+    SLICE_X57Y144.BMUX   Topbb                 0.616   Inst_MouseDisplay/xpos[11]_hcount[11]_LessThan_8_o
+                                                       Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_lut<5>
+                                                       Inst_MouseDisplay/Mcompar_xpos[11]_hcount[11]_LessThan_8_o_cy<5>
+    SLICE_X56Y144.B2     net (fanout=1)        0.589   Inst_MouseDisplay/xpos[11]_hcount[11]_LessThan_8_o
+    SLICE_X56Y144.CLK    Tas                   0.025   Inst_MouseDisplay/enable_mouse_display
+                                                       Inst_MouseDisplay/xpos[11]_mousepixel[1]_AND_41_o1
+                                                       Inst_MouseDisplay/enable_mouse_display
+    -------------------------------------------------  ---------------------------
+    Total                                      3.641ns (1.845ns logic, 1.796ns route)
+                                                       (50.7% logic, 49.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_MouseCtl/state_FSM_FFd1 (SLICE_X70Y129.A4), 68 paths
+Paths for end point Inst_MouseCtl/state_FSM_FFd1 (SLICE_X68Y132.A4), 68 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     5.105ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     5.520ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_MouseCtl/Inst_Ps2Interface/rx_data_3 (FF)
+  Destination:          Inst_MouseCtl/state_FSM_FFd1 (FF)
+  Requirement:          9.259ns
+  Data Path Delay:      3.645ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.022ns (0.105 - 0.127)
+  Source Clock:         pxl_clk rising at 0.000ns
+  Destination Clock:    pxl_clk rising at 9.259ns
+  Clock Uncertainty:    0.072ns
+
+  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_MouseCtl/Inst_Ps2Interface/rx_data_3 to Inst_MouseCtl/state_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y131.DQ     Tcko                  0.393   Inst_MouseCtl/Inst_Ps2Interface/rx_data<3>
+                                                       Inst_MouseCtl/Inst_Ps2Interface/rx_data_3
+    SLICE_X67Y133.B1     net (fanout=7)        0.828   Inst_MouseCtl/Inst_Ps2Interface/rx_data<3>
+    SLICE_X67Y133.B      Tilo                  0.097   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o
+                                                       Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>11
+    SLICE_X67Y133.C5     net (fanout=4)        0.348   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>1
+    SLICE_X67Y133.C      Tilo                  0.097   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o
+                                                       Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>1
+    SLICE_X68Y130.A1     net (fanout=8)        0.857   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o
+    SLICE_X68Y130.A      Tilo                  0.097   Inst_MouseCtl/timeout_cnt<23>
+                                                       Inst_MouseCtl/state_FSM_FFd1-In1
+    SLICE_X68Y132.B3     net (fanout=1)        0.457   Inst_MouseCtl/state_FSM_FFd1-In1
+    SLICE_X68Y132.B      Tilo                  0.097   Inst_MouseCtl/state_FSM_FFd2
+                                                       Inst_MouseCtl/state_FSM_FFd1-In2
+    SLICE_X68Y132.A4     net (fanout=1)        0.307   Inst_MouseCtl/state_FSM_FFd1-In2
+    SLICE_X68Y132.CLK    Tas                   0.067   Inst_MouseCtl/state_FSM_FFd2
+                                                       Inst_MouseCtl/state_FSM_FFd1-In5
+                                                       Inst_MouseCtl/state_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.645ns (0.848ns logic, 2.797ns route)
+                                                       (23.3% logic, 76.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.601ns (requirement - (data path - clock path skew + uncertainty))
   Source:               Inst_MouseCtl/Inst_Ps2Interface/rx_data_2 (FF)
   Destination:          Inst_MouseCtl/state_FSM_FFd1 (FF)
   Requirement:          9.259ns
-  Data Path Delay:      3.976ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.106ns (0.561 - 0.667)
+  Data Path Delay:      3.564ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.022ns (0.105 - 0.127)
   Source Clock:         pxl_clk rising at 0.000ns
   Destination Clock:    pxl_clk rising at 9.259ns
   Clock Uncertainty:    0.072ns
@@ -230,77 +401,35 @@ Slack (setup path):     5.105ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X75Y131.CQ     Tcko                  0.341   Inst_MouseCtl/Inst_Ps2Interface/rx_data<3>
+    SLICE_X70Y131.CQ     Tcko                  0.393   Inst_MouseCtl/Inst_Ps2Interface/rx_data<3>
                                                        Inst_MouseCtl/Inst_Ps2Interface/rx_data_2
-    SLICE_X68Y132.B1     net (fanout=7)        0.902   Inst_MouseCtl/Inst_Ps2Interface/rx_data<2>
-    SLICE_X68Y132.B      Tilo                  0.097   Inst_MouseCtl/_n0413_inv1
+    SLICE_X67Y133.B2     net (fanout=7)        0.747   Inst_MouseCtl/Inst_Ps2Interface/rx_data<2>
+    SLICE_X67Y133.B      Tilo                  0.097   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o
                                                        Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>11
-    SLICE_X68Y132.C5     net (fanout=4)        0.353   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>1
-    SLICE_X68Y132.C      Tilo                  0.097   Inst_MouseCtl/_n0413_inv1
+    SLICE_X67Y133.C5     net (fanout=4)        0.348   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>1
+    SLICE_X67Y133.C      Tilo                  0.097   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o
                                                        Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>1
-    SLICE_X72Y127.C2     net (fanout=8)        0.867   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o
-    SLICE_X72Y127.C      Tilo                  0.097   Inst_MouseCtl/PWR_12_o_timeout_cnt[23]_equal_7_o
+    SLICE_X68Y130.A1     net (fanout=8)        0.857   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o
+    SLICE_X68Y130.A      Tilo                  0.097   Inst_MouseCtl/timeout_cnt<23>
                                                        Inst_MouseCtl/state_FSM_FFd1-In1
-    SLICE_X70Y129.B1     net (fanout=1)        0.782   Inst_MouseCtl/state_FSM_FFd1-In1
-    SLICE_X70Y129.B      Tilo                  0.097   Inst_MouseCtl/state_FSM_FFd2
+    SLICE_X68Y132.B3     net (fanout=1)        0.457   Inst_MouseCtl/state_FSM_FFd1-In1
+    SLICE_X68Y132.B      Tilo                  0.097   Inst_MouseCtl/state_FSM_FFd2
                                                        Inst_MouseCtl/state_FSM_FFd1-In2
-    SLICE_X70Y129.A4     net (fanout=1)        0.315   Inst_MouseCtl/state_FSM_FFd1-In2
-    SLICE_X70Y129.CLK    Tas                   0.028   Inst_MouseCtl/state_FSM_FFd2
+    SLICE_X68Y132.A4     net (fanout=1)        0.307   Inst_MouseCtl/state_FSM_FFd1-In2
+    SLICE_X68Y132.CLK    Tas                   0.067   Inst_MouseCtl/state_FSM_FFd2
                                                        Inst_MouseCtl/state_FSM_FFd1-In5
                                                        Inst_MouseCtl/state_FSM_FFd1
     -------------------------------------------------  ---------------------------
-    Total                                      3.976ns (0.757ns logic, 3.219ns route)
-                                                       (19.0% logic, 81.0% route)
+    Total                                      3.564ns (0.848ns logic, 2.716ns route)
+                                                       (23.8% logic, 76.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.121ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_MouseCtl/Inst_Ps2Interface/rx_data_1 (FF)
-  Destination:          Inst_MouseCtl/state_FSM_FFd1 (FF)
-  Requirement:          9.259ns
-  Data Path Delay:      3.960ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.106ns (0.561 - 0.667)
-  Source Clock:         pxl_clk rising at 0.000ns
-  Destination Clock:    pxl_clk rising at 9.259ns
-  Clock Uncertainty:    0.072ns
-
-  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Discrete Jitter (DJ):       0.125ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: Inst_MouseCtl/Inst_Ps2Interface/rx_data_1 to Inst_MouseCtl/state_FSM_FFd1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X75Y131.BQ     Tcko                  0.341   Inst_MouseCtl/Inst_Ps2Interface/rx_data<3>
-                                                       Inst_MouseCtl/Inst_Ps2Interface/rx_data_1
-    SLICE_X68Y132.B3     net (fanout=10)       0.886   Inst_MouseCtl/Inst_Ps2Interface/rx_data<1>
-    SLICE_X68Y132.B      Tilo                  0.097   Inst_MouseCtl/_n0413_inv1
-                                                       Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>11
-    SLICE_X68Y132.C5     net (fanout=4)        0.353   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>1
-    SLICE_X68Y132.C      Tilo                  0.097   Inst_MouseCtl/_n0413_inv1
-                                                       Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>1
-    SLICE_X72Y127.C2     net (fanout=8)        0.867   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o
-    SLICE_X72Y127.C      Tilo                  0.097   Inst_MouseCtl/PWR_12_o_timeout_cnt[23]_equal_7_o
-                                                       Inst_MouseCtl/state_FSM_FFd1-In1
-    SLICE_X70Y129.B1     net (fanout=1)        0.782   Inst_MouseCtl/state_FSM_FFd1-In1
-    SLICE_X70Y129.B      Tilo                  0.097   Inst_MouseCtl/state_FSM_FFd2
-                                                       Inst_MouseCtl/state_FSM_FFd1-In2
-    SLICE_X70Y129.A4     net (fanout=1)        0.315   Inst_MouseCtl/state_FSM_FFd1-In2
-    SLICE_X70Y129.CLK    Tas                   0.028   Inst_MouseCtl/state_FSM_FFd2
-                                                       Inst_MouseCtl/state_FSM_FFd1-In5
-                                                       Inst_MouseCtl/state_FSM_FFd1
-    -------------------------------------------------  ---------------------------
-    Total                                      3.960ns (0.757ns logic, 3.203ns route)
-                                                       (19.1% logic, 80.9% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     5.208ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     5.602ns (requirement - (data path - clock path skew + uncertainty))
   Source:               Inst_MouseCtl/Inst_Ps2Interface/rx_data_5 (FF)
   Destination:          Inst_MouseCtl/state_FSM_FFd1 (FF)
   Requirement:          9.259ns
-  Data Path Delay:      3.875ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.104ns (0.561 - 0.665)
+  Data Path Delay:      3.483ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.102ns (0.564 - 0.666)
   Source Clock:         pxl_clk rising at 0.000ns
   Destination Clock:    pxl_clk rising at 9.259ns
   Clock Uncertainty:    0.072ns
@@ -314,144 +443,27 @@ Slack (setup path):     5.208ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X72Y131.BQ     Tcko                  0.341   Inst_MouseCtl/Inst_Ps2Interface/rx_data<7>
+    SLICE_X72Y132.BQ     Tcko                  0.341   Inst_MouseCtl/Inst_Ps2Interface/rx_data<7>
                                                        Inst_MouseCtl/Inst_Ps2Interface/rx_data_5
-    SLICE_X68Y132.B2     net (fanout=5)        0.801   Inst_MouseCtl/Inst_Ps2Interface/rx_data<5>
-    SLICE_X68Y132.B      Tilo                  0.097   Inst_MouseCtl/_n0413_inv1
+    SLICE_X67Y133.B4     net (fanout=5)        0.718   Inst_MouseCtl/Inst_Ps2Interface/rx_data<5>
+    SLICE_X67Y133.B      Tilo                  0.097   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o
                                                        Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>11
-    SLICE_X68Y132.C5     net (fanout=4)        0.353   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>1
-    SLICE_X68Y132.C      Tilo                  0.097   Inst_MouseCtl/_n0413_inv1
+    SLICE_X67Y133.C5     net (fanout=4)        0.348   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>1
+    SLICE_X67Y133.C      Tilo                  0.097   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o
                                                        Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o<7>1
-    SLICE_X72Y127.C2     net (fanout=8)        0.867   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o
-    SLICE_X72Y127.C      Tilo                  0.097   Inst_MouseCtl/PWR_12_o_timeout_cnt[23]_equal_7_o
+    SLICE_X68Y130.A1     net (fanout=8)        0.857   Inst_MouseCtl/rx_data[7]_PWR_12_o_equal_132_o
+    SLICE_X68Y130.A      Tilo                  0.097   Inst_MouseCtl/timeout_cnt<23>
                                                        Inst_MouseCtl/state_FSM_FFd1-In1
-    SLICE_X70Y129.B1     net (fanout=1)        0.782   Inst_MouseCtl/state_FSM_FFd1-In1
-    SLICE_X70Y129.B      Tilo                  0.097   Inst_MouseCtl/state_FSM_FFd2
+    SLICE_X68Y132.B3     net (fanout=1)        0.457   Inst_MouseCtl/state_FSM_FFd1-In1
+    SLICE_X68Y132.B      Tilo                  0.097   Inst_MouseCtl/state_FSM_FFd2
                                                        Inst_MouseCtl/state_FSM_FFd1-In2
-    SLICE_X70Y129.A4     net (fanout=1)        0.315   Inst_MouseCtl/state_FSM_FFd1-In2
-    SLICE_X70Y129.CLK    Tas                   0.028   Inst_MouseCtl/state_FSM_FFd2
+    SLICE_X68Y132.A4     net (fanout=1)        0.307   Inst_MouseCtl/state_FSM_FFd1-In2
+    SLICE_X68Y132.CLK    Tas                   0.067   Inst_MouseCtl/state_FSM_FFd2
                                                        Inst_MouseCtl/state_FSM_FFd1-In5
                                                        Inst_MouseCtl/state_FSM_FFd1
     -------------------------------------------------  ---------------------------
-    Total                                      3.875ns (0.757ns logic, 3.118ns route)
-                                                       (19.5% logic, 80.5% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point Inst_MouseCtl/periodic_check_cnt_24 (SLICE_X66Y132.SR), 27 paths
---------------------------------------------------------------------------------
-Slack (setup path):     5.447ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_MouseCtl/periodic_check_cnt_10 (FF)
-  Destination:          Inst_MouseCtl/periodic_check_cnt_24 (FF)
-  Requirement:          9.259ns
-  Data Path Delay:      3.722ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.018ns (0.105 - 0.123)
-  Source Clock:         pxl_clk rising at 0.000ns
-  Destination Clock:    pxl_clk rising at 9.259ns
-  Clock Uncertainty:    0.072ns
-
-  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Discrete Jitter (DJ):       0.125ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: Inst_MouseCtl/periodic_check_cnt_10 to Inst_MouseCtl/periodic_check_cnt_24
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X66Y128.CQ     Tcko                  0.393   Inst_MouseCtl/periodic_check_cnt<11>
-                                                       Inst_MouseCtl/periodic_check_cnt_10
-    SLICE_X67Y129.A2     net (fanout=2)        0.698   Inst_MouseCtl/periodic_check_cnt<10>
-    SLICE_X67Y129.A      Tilo                  0.097   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>1
-                                                       Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>2
-    SLICE_X67Y130.C2     net (fanout=1)        0.737   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>1
-    SLICE_X67Y130.C      Tilo                  0.097   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>
-                                                       Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>5
-    SLICE_X69Y130.A2     net (fanout=13)       0.615   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o
-    SLICE_X69Y130.A      Tilo                  0.097   Inst_MouseCtl/reset_timeout_cnt
-                                                       Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o_01
-    SLICE_X66Y132.SR     net (fanout=7)        0.615   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o_0
-    SLICE_X66Y132.CLK    Tsrck                 0.373   Inst_MouseCtl/periodic_check_cnt<25>
-                                                       Inst_MouseCtl/periodic_check_cnt_24
-    -------------------------------------------------  ---------------------------
-    Total                                      3.722ns (1.057ns logic, 2.665ns route)
-                                                       (28.4% logic, 71.6% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     5.536ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_MouseCtl/periodic_check_cnt_5 (FF)
-  Destination:          Inst_MouseCtl/periodic_check_cnt_24 (FF)
-  Requirement:          9.259ns
-  Data Path Delay:      3.634ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.017ns (0.105 - 0.122)
-  Source Clock:         pxl_clk rising at 0.000ns
-  Destination Clock:    pxl_clk rising at 9.259ns
-  Clock Uncertainty:    0.072ns
-
-  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Discrete Jitter (DJ):       0.125ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: Inst_MouseCtl/periodic_check_cnt_5 to Inst_MouseCtl/periodic_check_cnt_24
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X66Y127.BQ     Tcko                  0.393   Inst_MouseCtl/periodic_check_cnt<7>
-                                                       Inst_MouseCtl/periodic_check_cnt_5
-    SLICE_X67Y127.A3     net (fanout=2)        0.650   Inst_MouseCtl/periodic_check_cnt<5>
-    SLICE_X67Y127.A      Tilo                  0.097   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>2
-                                                       Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>3
-    SLICE_X67Y130.C1     net (fanout=1)        0.697   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>2
-    SLICE_X67Y130.C      Tilo                  0.097   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>
-                                                       Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>5
-    SLICE_X69Y130.A2     net (fanout=13)       0.615   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o
-    SLICE_X69Y130.A      Tilo                  0.097   Inst_MouseCtl/reset_timeout_cnt
-                                                       Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o_01
-    SLICE_X66Y132.SR     net (fanout=7)        0.615   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o_0
-    SLICE_X66Y132.CLK    Tsrck                 0.373   Inst_MouseCtl/periodic_check_cnt<25>
-                                                       Inst_MouseCtl/periodic_check_cnt_24
-    -------------------------------------------------  ---------------------------
-    Total                                      3.634ns (1.057ns logic, 2.577ns route)
-                                                       (29.1% logic, 70.9% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     5.592ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               Inst_MouseCtl/periodic_check_cnt_1 (FF)
-  Destination:          Inst_MouseCtl/periodic_check_cnt_24 (FF)
-  Requirement:          9.259ns
-  Data Path Delay:      3.580ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.015ns (0.105 - 0.120)
-  Source Clock:         pxl_clk rising at 0.000ns
-  Destination Clock:    pxl_clk rising at 9.259ns
-  Clock Uncertainty:    0.072ns
-
-  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Discrete Jitter (DJ):       0.125ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: Inst_MouseCtl/periodic_check_cnt_1 to Inst_MouseCtl/periodic_check_cnt_24
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X66Y126.BQ     Tcko                  0.393   Inst_MouseCtl/periodic_check_cnt<3>
-                                                       Inst_MouseCtl/periodic_check_cnt_1
-    SLICE_X67Y127.A2     net (fanout=2)        0.596   Inst_MouseCtl/periodic_check_cnt<1>
-    SLICE_X67Y127.A      Tilo                  0.097   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>2
-                                                       Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>3
-    SLICE_X67Y130.C1     net (fanout=1)        0.697   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>2
-    SLICE_X67Y130.C      Tilo                  0.097   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>
-                                                       Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o<25>5
-    SLICE_X69Y130.A2     net (fanout=13)       0.615   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o
-    SLICE_X69Y130.A      Tilo                  0.097   Inst_MouseCtl/reset_timeout_cnt
-                                                       Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o_01
-    SLICE_X66Y132.SR     net (fanout=7)        0.615   Inst_MouseCtl/PWR_12_o_periodic_check_cnt[25]_equal_1_o_0
-    SLICE_X66Y132.CLK    Tsrck                 0.373   Inst_MouseCtl/periodic_check_cnt<25>
-                                                       Inst_MouseCtl/periodic_check_cnt_24
-    -------------------------------------------------  ---------------------------
-    Total                                      3.580ns (1.057ns logic, 2.523ns route)
-                                                       (29.5% logic, 70.5% route)
+    Total                                      3.483ns (0.796ns logic, 2.687ns route)
+                                                       (22.9% logic, 77.1% route)
 
 --------------------------------------------------------------------------------
 
@@ -459,42 +471,14 @@ Hold Paths: TS_clk_wiz_0_inst_U0_clk_out1_clk_wiz_0 = PERIOD TIMEGRP
         "clk_wiz_0_inst_U0_clk_out1_clk_wiz_0" TS_sys_clk_pin * 1.08 HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_MouseCtl/Inst_Ps2Interface/tx_parity (SLICE_X74Y129.D6), 1 path
+Paths for end point Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_s (SLICE_X86Y124.AX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.113ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               Inst_MouseCtl/tx_data_2 (FF)
-  Destination:          Inst_MouseCtl/Inst_Ps2Interface/tx_parity (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.127ns (Levels of Logic = 1)
-  Clock Path Skew:      0.014ns (0.072 - 0.058)
-  Source Clock:         pxl_clk rising at 9.259ns
-  Destination Clock:    pxl_clk rising at 9.259ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: Inst_MouseCtl/tx_data_2 to Inst_MouseCtl/Inst_Ps2Interface/tx_parity
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X75Y129.BQ     Tcko                  0.141   Inst_MouseCtl/tx_data<5>
-                                                       Inst_MouseCtl/tx_data_2
-    SLICE_X74Y129.D6     net (fanout=2)        0.062   Inst_MouseCtl/tx_data<2>
-    SLICE_X74Y129.CLK    Tah         (-Th)     0.076   Inst_MouseCtl/Inst_Ps2Interface/tx_parity
-                                                       Inst_MouseCtl/Inst_Ps2Interface_Mram_tx_data[7]_PWR_13_o_Mux_11_o1211
-                                                       Inst_MouseCtl/Inst_Ps2Interface/tx_parity
-    -------------------------------------------------  ---------------------------
-    Total                                      0.127ns (0.065ns logic, 0.062ns route)
-                                                       (51.2% logic, 48.8% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_s (SLICE_X88Y124.CX), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.166ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.164ns (requirement - (clock path skew + uncertainty - data path))
   Source:               Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_clean (FF)
   Destination:          Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_s (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.166ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.178ns (Levels of Logic = 0)
+  Clock Path Skew:      0.014ns (0.072 - 0.058)
   Source Clock:         pxl_clk rising at 9.259ns
   Destination Clock:    pxl_clk rising at 9.259ns
   Clock Uncertainty:    0.000ns
@@ -503,42 +487,68 @@ Slack (hold path):      0.166ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X88Y124.CQ     Tcko                  0.164   Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_clean
+    SLICE_X89Y124.BQ     Tcko                  0.141   Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_clean
                                                        Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_clean
-    SLICE_X88Y124.CX     net (fanout=2)        0.066   Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_clean
-    SLICE_X88Y124.CLK    Tckdi       (-Th)     0.064   Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_clean
+    SLICE_X86Y124.AX     net (fanout=2)        0.112   Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_clean
+    SLICE_X86Y124.CLK    Tckdi       (-Th)     0.075   Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_s
                                                        Inst_MouseCtl/Inst_Ps2Interface/ps2_clk_s
     -------------------------------------------------  ---------------------------
-    Total                                      0.166ns (0.100ns logic, 0.066ns route)
-                                                       (60.2% logic, 39.8% route)
+    Total                                      0.178ns (0.066ns logic, 0.112ns route)
+                                                       (37.1% logic, 62.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_MouseCtl/Inst_Ps2Interface/tx_parity (SLICE_X74Y129.D4), 1 path
+Paths for end point Inst_MouseCtl/y_pos[11]_dff_13_6 (SLICE_X63Y136.CX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.183ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               Inst_MouseCtl/tx_data_4 (FF)
-  Destination:          Inst_MouseCtl/Inst_Ps2Interface/tx_parity (FF)
+Slack (hold path):      0.175ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_MouseCtl/y_pos_6 (FF)
+  Destination:          Inst_MouseCtl/y_pos[11]_dff_13_6 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.197ns (Levels of Logic = 1)
-  Clock Path Skew:      0.014ns (0.072 - 0.058)
+  Data Path Delay:      0.212ns (Levels of Logic = 0)
+  Clock Path Skew:      0.037ns (0.308 - 0.271)
   Source Clock:         pxl_clk rising at 9.259ns
   Destination Clock:    pxl_clk rising at 9.259ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: Inst_MouseCtl/tx_data_4 to Inst_MouseCtl/Inst_Ps2Interface/tx_parity
+  Minimum Data Path at Fast Process Corner: Inst_MouseCtl/y_pos_6 to Inst_MouseCtl/y_pos[11]_dff_13_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X75Y129.CQ     Tcko                  0.141   Inst_MouseCtl/tx_data<5>
-                                                       Inst_MouseCtl/tx_data_4
-    SLICE_X74Y129.D4     net (fanout=2)        0.132   Inst_MouseCtl/tx_data<4>
-    SLICE_X74Y129.CLK    Tah         (-Th)     0.076   Inst_MouseCtl/Inst_Ps2Interface/tx_parity
-                                                       Inst_MouseCtl/Inst_Ps2Interface_Mram_tx_data[7]_PWR_13_o_Mux_11_o1211
-                                                       Inst_MouseCtl/Inst_Ps2Interface/tx_parity
+    SLICE_X64Y135.CQ     Tcko                  0.141   Inst_MouseCtl/y_pos<7>
+                                                       Inst_MouseCtl/y_pos_6
+    SLICE_X63Y136.CX     net (fanout=5)        0.141   Inst_MouseCtl/y_pos<6>
+    SLICE_X63Y136.CLK    Tckdi       (-Th)     0.070   Inst_MouseCtl/y_pos[11]_dff_13<7>
+                                                       Inst_MouseCtl/y_pos[11]_dff_13_6
     -------------------------------------------------  ---------------------------
-    Total                                      0.197ns (0.065ns logic, 0.132ns route)
-                                                       (33.0% logic, 67.0% route)
+    Total                                      0.212ns (0.071ns logic, 0.141ns route)
+                                                       (33.5% logic, 66.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point MOUSE_X_POS_REG_10 (SLICE_X55Y142.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.179ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_MouseCtl/x_pos[11]_dff_12_10 (FF)
+  Destination:          MOUSE_X_POS_REG_10 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.215ns (Levels of Logic = 0)
+  Clock Path Skew:      0.036ns (0.307 - 0.271)
+  Source Clock:         pxl_clk rising at 9.259ns
+  Destination Clock:    pxl_clk rising at 9.259ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Inst_MouseCtl/x_pos[11]_dff_12_10 to MOUSE_X_POS_REG_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X56Y141.CQ     Tcko                  0.164   v_sync_reg
+                                                       Inst_MouseCtl/x_pos[11]_dff_12_10
+    SLICE_X55Y142.BX     net (fanout=1)        0.117   Inst_MouseCtl/x_pos[11]_dff_12<10>
+    SLICE_X55Y142.CLK    Tckdi       (-Th)     0.066   MOUSE_X_POS_REG<8>
+                                                       MOUSE_X_POS_REG_10
+    -------------------------------------------------  ---------------------------
+    Total                                      0.215ns (0.098ns logic, 0.117ns route)
+                                                       (45.6% logic, 54.4% route)
 
 --------------------------------------------------------------------------------
 
@@ -559,7 +569,7 @@ Slack: 8.259ns (period - (min low pulse limit / (low pulse / period)))
   Low pulse limit: 0.500ns (Tcl)
   Physical resource: Inst_MouseCtl/periodic_check_cnt<3>/CLK
   Logical resource: Inst_MouseCtl/periodic_check_cnt_0/CK
-  Location pin: SLICE_X66Y126.CLK
+  Location pin: SLICE_X65Y125.CLK
   Clock network: pxl_clk
 --------------------------------------------------------------------------------
 Slack: 8.259ns (period - (min high pulse limit / (high pulse / period)))
@@ -568,7 +578,7 @@ Slack: 8.259ns (period - (min high pulse limit / (high pulse / period)))
   High pulse limit: 0.500ns (Tch)
   Physical resource: Inst_MouseCtl/periodic_check_cnt<3>/CLK
   Logical resource: Inst_MouseCtl/periodic_check_cnt_0/CK
-  Location pin: SLICE_X66Y126.CLK
+  Location pin: SLICE_X65Y125.CLK
   Clock network: pxl_clk
 --------------------------------------------------------------------------------
 
@@ -580,8 +590,8 @@ Derived Constraints for TS_sys_clk_pin
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk_pin                 |     10.000ns|      4.000ns|      4.505ns|            0|            0|            0|         9504|
-| TS_clk_wiz_0_inst_U0_clk_out1_|      9.259ns|      4.171ns|          N/A|            0|            0|         9504|            0|
+|TS_sys_clk_pin                 |     10.000ns|      4.000ns|      4.388ns|            0|            0|            0|         9419|
+| TS_clk_wiz_0_inst_U0_clk_out1_|      9.259ns|      4.063ns|          N/A|            0|            0|         9419|            0|
 | clk_wiz_0                     |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
@@ -597,7 +607,7 @@ Clock to Setup on destination clock CLK_I
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_I          |    4.171|         |         |         |
+CLK_I          |    4.063|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -606,23 +616,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 9504 paths, 0 nets, and 1839 connections
+Constraints cover 9419 paths, 0 nets, and 1747 connections
 
 Design statistics:
-   Minimum period:   4.171ns{1}   (Maximum frequency: 239.751MHz)
+   Minimum period:   4.063ns{1}   (Maximum frequency: 246.124MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue Mar 07 15:06:12 2017 
+Analysis completed Sat Apr 01 15:48:10 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 616 MB
+Peak Memory Usage: 631 MB
 
 
 

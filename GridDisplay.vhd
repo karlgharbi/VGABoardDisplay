@@ -89,9 +89,10 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
 use ieee.math_real.all;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- simulation library
 --library UNISIM;
@@ -138,78 +139,20 @@ architecture Behavioral of BoardDisplay is
 
 constant numRows: integer := 6;
 constant numColumns: integer := 7;
-constant slotSize: integer := 100;
-constant borderSize: integer := 10;
+constant slotSize: integer := 5;
+constant borderSize: integer := 1;
 
 constant displayWidth: integer := ((numColumns * slotSize) + ((numColumns+1) * borderSize));
 constant displayHeight: integer := (((numRows+1 * slotSize) + ((numRows+1) * borderSize) + borderSize));
 
-constant X_OFFSET: std_logic_vector(11 downto 0) := std_logic_vector(to_unsigned(displayHeight, 12));
-constant Y_OFFSET: std_logic_vector(11 downto 0) := std_logic_vector(to_unsigned(displayWidth, 12));
+constant X_OFFSET: std_logic_vector(11 downto 0) := std_logic_vector(to_unsigned(displayWidth, 12));
+constant Y_OFFSET: std_logic_vector(11 downto 0) := std_logic_vector(to_unsigned(displayHeight, 12));
 						
 constant X_OFFSET_HALF: std_logic_vector(11 downto 0) := '0' & X_OFFSET(11 downto 1);
 constant Y_OFFSET_HALF: std_logic_vector(11 downto 0) := '0' & Y_OFFSET(11 downto 1);
 
-type newColumn is array (displayWidth downto 0) of std_logic_vector(1 downto 0);
---change: Use 3D array rather than 2D array in order to accommodate rectangular spritemap
-type newdisplayram is array (displayHeight downto 0) of newColumn;
-type displayRom is array(0 to 28, 43 downto 0) of std_logic_vector(1 downto 0);
--- the memory that holds the cursor.
--- change: 00 now represents transparent instead of black (i dun goofed)
--- change: I take that back
--- 00 - black
--- 01 - yellow
--- 1x - transparent
-
-constant board: displayrom := (
-
-("01","01","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","01","01"),
-("01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01","00","00","00","00","00","01","01"),
-("01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01","01"),
-("01","01","01","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","01","01","01"),
-("01","01","01","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","01","01","01"),
-("01","01","01","01","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","01","01","01","01")
-
-);
-
--- width and height of cursor.
--- change: Use seperate offsets for horizontal and vertical dimensions
---constant X_OFFSET: std_logic_vector(5 downto 0) := "101100";   -- 44
---constant Y_OFFSET: std_logic_vector(4 downto 0) := "11101"; --29
---
---constant X_OFFSET_HALF: std_logic_vector(4 downto 0) := X_OFFSET(5 downto 1);
---constant Y_OFFSET_HALF: std_logic_vector(3 downto 0) := Y_OFFSET(4 downto 1);
-
---44x28 bitmap, not square
---Will determine how to properly express this
---When picking the differential, will need to limit the max value to be
---within the space of the actual ROM
---(2^6 + 2^5 = 11 bits for ROM address)
---2048 values max for 11 bit number
---1276 addresses used
+--Converted data type from 3D array to 2D array
+type newdisplayram is array(displayWidth downto 0, displayHeight downto 0) of std_logic;
 
 ------------------------------------------------------------------------
 -- SIGNALS
@@ -217,8 +160,8 @@ constant board: displayrom := (
 --new: provide information for where the top left corner of the board will be,
 --as mouse input will not be used to figure that out.
 --coded as signals, but in practice considered to be a constant.
-signal hPoint : std_logic_vector(11 downto 0) := ('0' & hres(11 downto 1)) + X_OFFSET_HALF;
-signal vPoint : std_logic_vector(11 downto 0) := ('0' & vres(11 downto 1)) + Y_OFFSET_HALF;
+signal hPoint : std_logic_vector(11 downto 0) := (('0' & hres(11 downto 1)) + X_OFFSET_HALF);
+signal vPoint : std_logic_vector(11 downto 0) := (('0' & vres(11 downto 1)) + Y_OFFSET_HALF);
 
 --newer: New board replacement code
 signal newBoard : newdisplayram;
@@ -226,15 +169,11 @@ signal boardMade : std_logic := '0';
 
 -- pixel from the display memory, representing currently displayed
 -- pixel of the cursor, if the cursor is being display at this point
-signal boardpixel: std_logic_vector(1 downto 0) := (others => '0');
+signal boardpixel: std_logic := '0';
 -- when high, enables displaying of the cursor, and reading the
 -- cursor memory.
 signal enable_display: std_logic := '0';
 
--- difference in range 0-15 between the vga counters and mouse position
---change: xdiff and ydiff lengths, per bitmap change
---signal xdiff: std_logic_vector(5 downto 0) := (others => '0');
---signal ydiff: std_logic_vector(4 downto 0) := (others => '0');
 signal xdiff: std_logic_vector(11 downto 0) := (others => '0');
 signal ydiff: std_logic_vector(11 downto 0) := (others => '0');
 
@@ -245,6 +184,17 @@ signal blue_int : std_logic_vector(3 downto 0);
 signal red_int1  : std_logic_vector(3 downto 0);
 signal green_int1: std_logic_vector(3 downto 0);
 signal blue_int1 : std_logic_vector(3 downto 0);
+
+signal isTopPart: boolean;
+signal isBottomPart: boolean;
+signal isSlotPart: boolean;
+signal isBorderPart: boolean;
+	
+signal topPartFill: boolean;
+signal bottomPartFill: boolean;
+signal slotPartFill: boolean;
+signal borderPartFill: boolean;
+signal fillCond: boolean;
 
 begin
 
@@ -258,70 +208,35 @@ begin
 --until (x+1) divisions done
 --Final Loop: Generate legs
 --	--generate/update new board
-	makeBoard: process(pixel_clk, newBoard, boardMade)
+
+	makeBoard: process(pixel_clk, newBoard, boardMade, isTopPart, isBottomPart, isSlotPart, isBorderPart, topPartFill,
+							bottomPartFill, slotPartFill, borderPartFill, fillCond)
 	begin
-		if(boardMade = '0') then
+--		if(boardMade = '0') then
 			for row in 0 to displayWidth loop
 				for column in 0 to displayHeight loop
-					--top part generation conditionals
-					if(row < (slotSize)) then
-						if((column < borderSize) or (column > (X_OFFSET - 1 - borderSize))) then
-							newBoard(row(column)) <= "01";
-						else
-							newBoard(row(column)) <= "00";
-						end if;
-				   --bottom part generation conditionals
-					elsif(row >= ((numRows+1) * (borderSize + slotSize))) then
-						if((column < (Y_OFFSET - (numRows+1) * (borderSize + slotSize))) or
-							(column > (Y_OFFSET - (Y_OFFSET - (numRows+1) * (borderSize + slotSize))))) then
-							newBoard(row, column) <= "01";
-						else
-							newBoard(row, column) <= "00";
-						end if;
-					--main board generation conditionals
+					isTopPart <= (row < slotSize);
+					isBottomPart <= (row >= ((numRows+1) * (borderSize + slotSize)));
+					isSlotPart <= (NOT (isTopPart OR isBottomPart OR isBorderPart));
+					isBorderPart <= ((row mod (slotSize + borderSize)) >= slotSize);
+	 
+	
+					topPartFill <= (isTopPart AND ((column < borderSize) or (column > (X_OFFSET - 1 - borderSize))));
+					bottomPartFill <= (isBottomPart AND ((column < borderSize) or (column > (X_OFFSET - 1 - borderSize))));
+					slotPartFill <= (isSlotPart AND ((column mod (slotSize + borderSize)) < borderSize));
+					borderPartFill <= isBorderPart;
+					fillCond <= topPartFill OR bottomPartFill OR slotPartFill OR borderPartFill;
+					
+					if(fillCond = true) then
+						newBoard(row, column) <= '1';
 					else
-						--slot row generation conditionals
-						if((row mod (slotSize + borderSize)) < slotSize) then
-							if((column mod (slotSize + borderSize)) < borderSize) then
-								newBoard(row, column) <= "01";
-							else
-								newBoard(row, column) <= "00";
-							end if;
-						--border row generation conditional
-						else
-							newBoard(row) <= (others => "01");
-						end if;
+						newBoard(row, column) <= '0';
 					end if;
 				end loop;
 			end loop;
-		boardMade <= '1';
-		end if;
+--		boardMade <= '1';
+--		end if;
 	end process;
-		
-
---   -- compute xdiff
---   x_diff: process(hcount, hPoint)
---   variable temp_diff: std_logic_vector(11 downto 0) := (others => '0');
---   begin
---			temp_diff := hcount - hPoint;
---			if (temp_diff(5 downto 0) > X"2B") then --X"2B" = 43
---				xdiff <= "101011";
---			else
---				xdiff <= temp_diff(5 downto 0);
---			end if;
---   end process x_diff;
---
---   -- compute ydiff
---   y_diff: process(vcount, vPoint)
---   variable temp_diff: std_logic_vector(11 downto 0) := (others => '0');
---   begin
---         temp_diff := vcount - vPoint;
---			if (temp_diff(4 downto 0) > X"1C") then --X"1C" = 28
---				ydiff <= "11100";
---			else
---				ydiff <= temp_diff(4 downto 0);
---			end if;
---   end process y_diff;
 
 -- compute xdiff
 	x_diff: process(hcount, hPoint)
@@ -361,7 +276,7 @@ begin
       if(rising_edge(pixel_clk)) then
          if(hcount >= hPoint + 1 and hcount <= (hPoint + X_OFFSET) and
             vcount >= vPoint + 1 and vcount <= (vPoint + Y_OFFSET)) and
-            (boardpixel = "01" or boardpixel = "00")
+            (boardpixel = '1' or boardpixel = '0')
          then
             enable_display <= '1';
          else
@@ -381,14 +296,17 @@ enable_display_out <= enable_display;
 --       if(blank = '0') then
             -- in display is enabled
             if(enable_display = '1') then
+				   red_out <= (others => '1');
+               green_out <= (others => '1');
+               blue_out <= (others => '0');
                -- yellow pixel of cursor
 					--change: white -> yellow
-               if(boardpixel = "01") then
+               if(boardpixel = '1') then
                   red_out <= (others => '1');
                   green_out <= (others => '1');
                   blue_out <= (others => '0');
                -- black pixel of cursor
-               elsif(boardpixel = "00") then
+               elsif(boardpixel = '0') then
                   red_out <= (others => '0');
                   green_out <= (others => '0');
                   blue_out <= (others => '0');
