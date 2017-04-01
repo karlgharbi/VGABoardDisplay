@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\name\Documents\DP2\Connect4Display\vga_ctrl.ncd
+OUTFILE=C:\Users\name\Documents\DP2\Connect4Display\vga_ctrl.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\Users\name\Documents\DP2\Connect4Display
+LICENSE=WebPack
+USER_INFO=174150314_1777501427_210644394_746

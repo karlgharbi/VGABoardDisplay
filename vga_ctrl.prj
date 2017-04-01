@@ -1,0 +1,7 @@
+vhdl work "Ps2Interface.vhd"
+vhdl work "clk_wiz_0_clk_wiz.vhd"
+vhdl work "MouseDisplay.vhd"
+vhdl work "MouseCtl.vhd"
+vhdl work "GridDisplay.vhd"
+vhdl work "clk_wiz_0.vhd"
+vhdl work "vga_ctrl.vhd"

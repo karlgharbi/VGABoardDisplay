@@ -1,0 +1,159 @@
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/VGAtest/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/VGAtest/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+netgen -intstyle ise -ar Structure -tm vga_ctrl -w -dir netgen/synthesis -ofmt vhdl -sim vga_ctrl.ngc vga_ctrl_synthesis.vhd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+netgen -intstyle ise -ar Structure -tm vga_ctrl -w -dir netgen/synthesis -ofmt vhdl -sim vga_ctrl.ngc vga_ctrl_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+netgen -intstyle ise -ar Structure -tm vga_ctrl -w -dir netgen/synthesis -ofmt vhdl -sim vga_ctrl.ngc vga_ctrl_synthesis.vhd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+netgen -intstyle ise -ar Structure -tm vga_ctrl -w -dir netgen/synthesis -ofmt vhdl -sim vga_ctrl.ngc vga_ctrl_synthesis.vhd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-3 vga_ctrl.ngc vga_ctrl.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.xst" -ofn "C:/Users/name/Documents/DP2/Connect4Display/vga_ctrl.syr" 

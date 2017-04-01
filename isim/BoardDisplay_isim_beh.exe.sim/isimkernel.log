@@ -1,0 +1,10 @@
+Command line:
+   BoardDisplay_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49641
+
+Sun Mar 05 14:21:50 2017
+
+
+ Elaboration Time: 0.078 sec

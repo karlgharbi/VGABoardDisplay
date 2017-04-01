@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/name/Documents/DP2/Connect4Display/MouseDisplay_isim_beh.exe" -prj "C:/Users/name/Documents/DP2/Connect4Display/MouseDisplay_beh.prj" "work.MouseDisplay" 
